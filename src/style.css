@@ -36,6 +36,7 @@ a:visited {
 
 .about-link {
   background-color: var(--accent-color);
+  color: var(--secondary-color);
 }
 .about-link:hover {
   color: var(--primary-color);
