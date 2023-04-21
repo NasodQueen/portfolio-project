@@ -1,0 +1,42 @@
+:root {
+  --primary-color: #fdf7c3;
+  --secondary-color: #ffdeb4;
+  --tertiary-color: #ffb4b4;
+  --accent-color: #b2a4ff;
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 10px;
+}
+
+.navigation-links {
+  margin-top: 40px;
+}
+.navigation-links a {
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--accent-color);
+}
+
+.about-link {
+  background-color: var(--accent-color);
+}
+
+.about-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+}
+
+.about-me-text {
+  background-color: var(--primary-color);
+  margin: 25px;
+  padding: 15px;
+}
