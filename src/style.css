@@ -9,6 +9,7 @@
   --box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   --heading-font: "Playfair Display", serif;
   --paragraph-font: "Raleway", sans-serif;
+  --spacer-height: 50px;
 }
 
 body {
@@ -17,14 +18,19 @@ body {
 }
 
 h1 {
-  font-size: 50px;
-  margin: 10px;
+  font-size: 4vw;
   font-family: var(--heading-font);
   font-weight: bold;
 }
 
+h2 {
+  font-size: 3vw;
+}
+
 h3 {
+  font-size: 2.5vw;
   opacity: 0.7;
+  margin: 0;
 }
 
 .navigation-links {
@@ -46,7 +52,7 @@ a {
 }
 
 a:visited {
-  color: var(--tertiary-color);
+  color: black;
 }
 
 .about-link {
@@ -74,9 +80,28 @@ a:visited {
   max-width: 75px;
 }
 
+.index-banner {
+  position: relative;
+}
+
 .hero {
-  background-color: var(--primary-color);
-  padding: 50px;
+  margin-top: 5%;
+  margin-left: 5%;
+  position: absolute;
+  text-align: left;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.moon-image {
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100vw;
+  /* filter: brightness(85%); */
+  /* filter: contrast(95%); */
 }
 
 .index-container-sections .col {
@@ -84,6 +109,59 @@ a:visited {
   margin: 20px;
   font-family: var(--heading-font);
   font-size: 36px;
-  min-width: 300px;
-  min-height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  padding-top: 115px;
+}
+
+.check-out-my-stuff {
+  font-weight: 900;
+  font-size: 3vw;
+}
+
+.col a {
+  text-decoration: none;
+}
+
+.index-container-sections .row {
+  margin: 0 auto;
+}
+
+.container-under-banner {
+}
+
+@media (min-width: 300px) {
+  .container-under-banner {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .container-under-banner {
+    margin-top: 20rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-under-banner {
+    margin-top: 21rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-under-banner {
+    margin-top: 25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-under-banner {
+    margin-top: 30rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-under-banner {
+    margin-top: 40rem;
+  }
 }
