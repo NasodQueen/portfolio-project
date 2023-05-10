@@ -78,3 +78,12 @@ a:visited {
   background-color: var(--primary-color);
   padding: 50px;
 }
+
+.index-container-sections .col {
+  background-color: var(--tertiary-color);
+  margin: 20px;
+  font-family: var(--heading-font);
+  font-size: 36px;
+  min-width: 300px;
+  min-height: 300px;
+}
