@@ -1,18 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
 :root {
   --primary-color: #fdf7c3;
   --secondary-color: #ffdeb4;
   --tertiary-color: #ffb4b4;
   --accent-color: #b2a4ff;
   --box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  --heading-font: "Playfair Display", serif;
+  --paragraph-font: "Raleway", sans-serif;
 }
 
 body {
   text-align: center;
+  font-family: var(--paragraph-font);
 }
 
 h1 {
   font-size: 50px;
   margin: 10px;
+  font-family: var(--heading-font);
+  font-weight: bold;
 }
 
 h3 {
@@ -64,4 +72,9 @@ a:visited {
 
 .logo {
   max-width: 75px;
+}
+
+.hero {
+  background-color: var(--primary-color);
+  padding: 50px;
 }
