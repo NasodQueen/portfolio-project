@@ -9,6 +9,14 @@
   --box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   --heading-font: "Playfair Display", serif;
   --paragraph-font: "Raleway", sans-serif;
+  --space-cadet: #27285eff;
+  --plum-web: #d193ccff;
+  --lavender-blush: #f3e4edff;
+  --ultra-violet: #555694ff;
+  --argentinian-blue: #7cbbecff;
+  --misty-rose: #f7dcdfff;
+  --african-violet: #a187b7ff;
+  --savoy-blue: #686bcdff;
 }
 
 body {
@@ -100,6 +108,7 @@ a:visited {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 100vw;
+  border-bottom: 1px white solid;
   /* filter: brightness(85%); */
   /* filter: contrast(95%); */
 }
@@ -110,18 +119,23 @@ a:visited {
 
 .link-square {
   margin: 30px;
-  background-color: #d193cc;
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: 10px;
 }
 
-.link-square a {
+.square-link {
   font-family: var(--heading-font);
   font-size: 3vw;
   text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 2px black;
 }
 
 .link-square a:visited {
-  color: black;
+  color: white;
 }
 
 .check-out-my-stuff {
