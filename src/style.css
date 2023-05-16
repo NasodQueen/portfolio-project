@@ -435,3 +435,8 @@ a:visited {
   padding: 0;
   border: none;
 }
+
+.contact-form {
+  background-color: var(--lightest-color);
+  color: var(--darkest-color);
+}
