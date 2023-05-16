@@ -9,26 +9,27 @@
   --box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   --heading-font: "Playfair Display", serif;
   --paragraph-font: "Raleway", sans-serif;
-  --space-cadet: #27285eff;
-  --plum-web: #d193ccff;
-  --lavender-blush: #f3e4edff;
-  --ultra-violet: #555694ff;
-  --argentinian-blue: #7cbbecff;
-  --misty-rose: #f7dcdfff;
-  --african-violet: #a187b7ff;
-  --savoy-blue: #686bcdff;
+  --lightest-color: #f3e4edff;
+  --darkest-color: #27285eff;
+  --light-pink: #f7dcdfff;
+  --pink: #d193ccff;
+  --blue: #7cbbecff;
+  --purple: #686bcdff;
+  --lighter-purple: #a187b7ff;
+  --darker-purple: #555694ff;
 }
 
 body {
   text-align: center;
   font-family: var(--paragraph-font);
-  background-color: #f3e4ed;
+  background-color: var(--darkest-color);
 }
 
 h1 {
   font-size: 4vw;
   font-family: var(--heading-font);
   font-weight: bold;
+  color: var(--lightest-color);
 }
 
 h2 {
@@ -41,22 +42,8 @@ h3 {
   margin: 0;
 }
 
-.navigation-links {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-}
-.navigation-links a {
-  text-decoration: none;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid var(--accent-color);
-  box-shadow: var(--box-shadow);
-}
-
 a {
-  color: var(--accent-color);
+  color: var(--purple);
 }
 
 a:visited {
@@ -64,7 +51,7 @@ a:visited {
 }
 
 .about-link {
-  background-color: var(--accent-color);
+  background-color: var(--purple);
   color: var(--secondary-color);
 }
 .about-link:hover {
@@ -79,7 +66,7 @@ a:visited {
 }
 
 .about-me-text {
-  background-color: var(--primary-color);
+  background-color: var(--lightest-color);
   margin: 25px;
   padding: 15px;
 }
@@ -419,4 +406,12 @@ a:visited {
   animation-delay: -85s;
   transform-origin: 14vw 11vh;
   box-shadow: -40vmin 0 5.659879430206319vmin currentColor;
+}
+
+.chibi-image {
+  max-width: 20vw;
+}
+
+.about-banner {
+  padding-top: 20px;
 }
