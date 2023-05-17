@@ -481,3 +481,13 @@ p {
 .socials a {
   text-shadow: 1px 1px 2px black;
 }
+
+/* .navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: green;
+} */
+
+/* Modify the background color */
+.navbar-custom {
+  background-color: lightgreen;
+}
