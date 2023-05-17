@@ -13,7 +13,7 @@
   --darkest-color: #27285eff;
   --light-pink: #f7dcdfff;
   --pink: #d193ccff;
-  --blue: #7cbbecff;
+  --blue: #7dbded;
   --purple: #686bcdff;
   --lighter-purple: #a187b7ff;
   --darker-purple: #555694ff;
@@ -51,16 +51,16 @@ h5 {
   font-size: 24px;
 }
 
-a {
-  color: var(--purple);
-}
-
-a:visited {
-  color: var(--purple);
-}
-
 p {
   color: var(--darkest-color);
+}
+
+a {
+  color: var(--pink);
+  transition: all 200ms ease;
+}
+a:hover {
+  color: var(--purple);
 }
 
 .about-link {
@@ -108,7 +108,7 @@ p {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 100vw;
-  border-bottom: 1px white solid;
+  border-bottom: 1px solid var(--light-pink);
   /* filter: brightness(85%); */
   /* filter: contrast(95%); */
 }
@@ -117,31 +117,38 @@ p {
   margin: 20px 0;
 }
 
-.link-square {
-  margin: 30px;
+.link-square a {
+  display: block;
+  color: var(--lightest-color);
+  font-family: var(--heading-font);
+  text-decoration: none;
+  text-shadow: 1px 1px 2px black;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.15);
   box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: 10px;
-}
-
-.square-link {
-  font-family: var(--heading-font);
-  font-size: 3vw;
-  text-decoration: none;
-  color: white;
-  text-shadow: 1px 1px 2px black;
+  transition: all 200ms ease;
 }
 
 .link-square a:visited {
-  color: white;
+  color: var(--lightest-color);
+}
+
+.link-square a:hover {
+  color: var(--darkest-color);
+  text-shadow: 1px 1px 2px var(--light-pink);
+  transform: scale(1.1, 1.1);
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 5px 1px var(--light-pink);
+  border: 1px solid var(--light-pink);
+  font-weight: bold;
 }
 
 .check-out-my-stuff {
   font-weight: bold;
   font-size: 3vw;
-  color: white;
+  color: var(--lightest-color);
   text-shadow: 1px 1px 2px black;
 }
 
@@ -149,13 +156,88 @@ p {
   margin: 0 auto;
 }
 
+.chibi-image {
+  max-width: 20vw;
+}
+
+.about-banner {
+  padding-top: 20px;
+}
+
+.project-container {
+  margin: 0 auto;
+  max-width: 80vw;
+  border-radius: 10px;
+}
+
+.project-image {
+  max-width: 40vw;
+}
+
+.card {
+  padding: 0;
+  border: none;
+}
+
+.contact-form {
+  background-color: var(--lightest-color);
+  color: var(--darkest-color);
+}
+
+.footer {
+  /* border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: 10px; */
+  /* max-width: 32vw; */
+  margin: auto;
+  margin-top: 10vw;
+}
+
+.socials a {
+  text-shadow: 1px 1px 2px black;
+  color: var(--purple);
+  transition: all 200ms ease;
+}
+
+.socials a:hover {
+  color: var(--pink);
+}
+
+.navbar-custom {
+  background: rgb(39, 40, 94);
+  background: linear-gradient(
+    90deg,
+    rgba(39, 40, 94, 1) 0%,
+    rgba(85, 86, 148, 1) 75%
+  );
+  box-shadow: var(--box-shadow);
+  border-bottom: 1px solid var(--darkest-color);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: var(--lightest-color);
+}
+
+.navbar-custom .dropdown-menu {
+  background-color: var(--darkest-color);
+  color: var(--lightest-color);
+}
+
+/* Media Queries */
+
 @media (min-width: 300px) {
   .container-under-banner {
     margin-top: 10rem;
   }
-  .link-square {
-    max-width: 75vw;
-    padding: 7vw 0;
+  .link-square a {
+    height: 10vh;
+    padding-top: 2.5vh;
+    max-width: 65vw;
+    margin: 20px auto;
+    font-size: 4.5vw;
   }
   .footer h4 {
     font-size: 6px;
@@ -169,9 +251,12 @@ p {
   .container-under-banner {
     margin-top: 20rem;
   }
-  .link-square {
-    margin: 30px;
-    max-width: 75vw;
+  .link-square a {
+    height: 10vh;
+    padding-top: 2vh;
+    max-width: 65vw;
+    margin: 20px auto;
+    font-size: 4.5vw;
   }
 }
 
@@ -179,9 +264,11 @@ p {
   .container-under-banner {
     margin-top: 21rem;
   }
-  .link-square {
-    margin: 30px;
-    max-width: 75vw;
+  .link-square a {
+    width: 15vw;
+    height: 15vw;
+    padding-top: 5vw;
+    font-size: 3vw;
   }
   .footer h4 {
     font-size: 10px;
@@ -195,9 +282,11 @@ p {
   .container-under-banner {
     margin-top: 25rem;
   }
-  .link-square {
-    margin: 30px;
-    max-width: 25vw;
+  .link-square a {
+    width: 15vw;
+    height: 15vw;
+    padding-top: 5vw;
+    font-size: 3vw;
   }
 }
 
@@ -205,9 +294,11 @@ p {
   .container-under-banner {
     margin-top: 30rem;
   }
-  .link-square {
-    margin: 30px;
-    padding: 5vw 0;
+  .link-square a {
+    width: 15vw;
+    height: 15vw;
+    padding-top: 5vw;
+    font-size: 3vw;
   }
 }
 
@@ -215,9 +306,11 @@ p {
   .container-under-banner {
     margin-top: 42rem;
   }
-  .link-square {
-    margin: 30px;
-    padding: 5vw 0;
+  .link-square a {
+    width: 15vw;
+    height: 15vw;
+    padding-top: 5vw;
+    font-size: 3vw;
   }
   .footer h4 {
     font-size: 16px;
@@ -227,13 +320,13 @@ p {
   }
 }
 
+/* Background Animation starts here! */
+
 @keyframes move {
   100% {
     transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
-
-/* Background Animation starts here! */
 
 .background {
   position: fixed;
@@ -241,7 +334,8 @@ p {
   height: 100vh;
   top: 0;
   left: 0;
-  background: #27285e;
+  /* background: #27285e; */
+  background: var(--darkest-color);
   overflow: hidden;
   z-index: -2;
 }
@@ -437,57 +531,4 @@ p {
   animation-delay: -85s;
   transform-origin: 14vw 11vh;
   box-shadow: -40vmin 0 5.659879430206319vmin currentColor;
-}
-
-.chibi-image {
-  max-width: 20vw;
-}
-
-.about-banner {
-  padding-top: 20px;
-}
-
-.project-container {
-  margin: 0 auto;
-  max-width: 80vw;
-  border-radius: 10px;
-}
-
-.project-image {
-  max-width: 40vw;
-}
-
-.card {
-  padding: 0;
-  border: none;
-}
-
-.contact-form {
-  background-color: var(--lightest-color);
-  color: var(--darkest-color);
-}
-
-.footer {
-  border-radius: 100px;
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: 10px;
-  max-width: 32vw;
-  margin: auto;
-  margin-top: 10vw;
-}
-
-.socials a {
-  text-shadow: 1px 1px 2px black;
-}
-
-/* .navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: green;
-} */
-
-/* Modify the background color */
-.navbar-custom {
-  background-color: lightgreen;
 }
