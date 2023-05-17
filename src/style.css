@@ -2,13 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 :root {
-  --primary-color: #fdf7c3;
-  --secondary-color: #ffdeb4;
-  --tertiary-color: #ffb4b4;
-  --accent-color: #b2a4ff;
-  --box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  --heading-font: "Playfair Display", serif;
-  --paragraph-font: "Raleway", sans-serif;
   --lightest-color: #f3e4edff;
   --darkest-color: #27285eff;
   --light-pink: #f7dcdfff;
@@ -17,6 +10,9 @@
   --purple: #686bcdff;
   --lighter-purple: #a187b7ff;
   --darker-purple: #555694ff;
+  --box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  --heading-font: "Playfair Display", serif;
+  --paragraph-font: "Raleway", sans-serif;
 }
 
 body {
@@ -89,7 +85,13 @@ a:hover {
 }
 
 .index-banner {
-  position: relative;
+  /* position: relative; */
+  width: 100%;
+  height: 32.2vw;
+  background-image: url(/images/moon.png);
+  background-size: cover;
+  margin-bottom: 2vw;
+  border-bottom: 1px solid var(--light-pink);
 }
 
 .hero {
@@ -101,20 +103,8 @@ a:hover {
   text-shadow: 1px 1px 2px black;
 }
 
-.moon-image {
-  z-index: -1;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 100vw;
-  border-bottom: 1px solid var(--light-pink);
-  /* filter: brightness(85%); */
-  /* filter: contrast(95%); */
-}
-
 .link-square-row {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .link-square a {
@@ -185,12 +175,6 @@ a:hover {
 }
 
 .footer {
-  /* border-radius: 100px;
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: 10px; */
-  /* max-width: 32vw; */
   margin: auto;
   margin-top: 10vw;
 }
@@ -221,17 +205,33 @@ a:hover {
   color: var(--lightest-color);
 }
 
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .nav-link:hover {
+  background-color: var(--purple);
+  border-radius: 10px;
+}
+
+.navbar-custom .navbar-nav .active {
+  font-weight: bold;
+  color: var(--purple);
+  background-color: var(--light-pink);
+  border-radius: 10px;
+}
+
 .navbar-custom .dropdown-menu {
   background-color: var(--darkest-color);
+}
+
+.navbar-custom .dropdown-item {
   color: var(--lightest-color);
 }
 
+.navbar-custom .dropdown-item:hover {
+  background-color: var(--purple);
+}
 /* Media Queries */
 
 @media (min-width: 300px) {
-  .container-under-banner {
-    margin-top: 10rem;
-  }
   .link-square a {
     height: 10vh;
     padding-top: 2.5vh;
@@ -248,9 +248,6 @@ a:hover {
 }
 
 @media (min-width: 576px) {
-  .container-under-banner {
-    margin-top: 20rem;
-  }
   .link-square a {
     height: 10vh;
     padding-top: 2vh;
@@ -261,9 +258,6 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .container-under-banner {
-    margin-top: 21rem;
-  }
   .link-square a {
     width: 15vw;
     height: 15vw;
@@ -279,9 +273,6 @@ a:hover {
 }
 
 @media (min-width: 992px) {
-  .container-under-banner {
-    margin-top: 25rem;
-  }
   .link-square a {
     width: 15vw;
     height: 15vw;
@@ -291,9 +282,6 @@ a:hover {
 }
 
 @media (min-width: 1200px) {
-  .container-under-banner {
-    margin-top: 30rem;
-  }
   .link-square a {
     width: 15vw;
     height: 15vw;
@@ -303,9 +291,6 @@ a:hover {
 }
 
 @media (min-width: 1400px) {
-  .container-under-banner {
-    margin-top: 42rem;
-  }
   .link-square a {
     width: 15vw;
     height: 15vw;
@@ -334,7 +319,6 @@ a:hover {
   height: 100vh;
   top: 0;
   left: 0;
-  /* background: #27285e; */
   background: var(--darkest-color);
   overflow: hidden;
   z-index: -2;
