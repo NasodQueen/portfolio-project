@@ -10,53 +10,63 @@
   --purple: #686bcdff;
   --lighter-purple: #a187b7ff;
   --darker-purple: #555694ff;
+  --not-black: #1e1f3d;
+  --not-black: rgb(30, 31, 61);
   --box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   --heading-font: "Playfair Display", serif;
   --paragraph-font: "Raleway", sans-serif;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
 }
 
 body {
   text-align: center;
   font-family: var(--paragraph-font);
   background-color: var(--darkest-color);
-  color: var(--lightest-color);
+  box-sizing: inherit;
 }
 
 h1 {
-  font-size: 4vw;
   font-family: var(--heading-font);
+  font-size: 4vw;
   font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+  color: var(--lightest-color);
 }
 
 h2 {
   font-size: 3vw;
+  color: var(--lightest-color);
 }
 
 h3 {
   font-size: 2.5vw;
   opacity: 0.7;
   margin: 0;
+  color: var(--lightest-color);
 }
 
 h4 {
   text-shadow: 1px 1px 2px black;
+  margin: 0;
 }
 
 h5 {
   font-family: var(--heading-font);
-  font-size: 24px;
+  font-size: 2vw;
+  font-weight: bold;
+  color: var(--darker-purple);
 }
 
 p {
   color: var(--darkest-color);
 }
 
-a {
-  color: var(--pink);
-  transition: all 200ms ease;
-}
-a:hover {
-  color: var(--purple);
+.header {
+  margin: 25px 0;
 }
 
 .about-link {
@@ -78,6 +88,8 @@ a:hover {
   background-color: var(--lightest-color);
   margin: 25px;
   padding: 15px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
 }
 
 .logo {
@@ -91,6 +103,7 @@ a:hover {
   background-size: cover;
   margin-bottom: 2vw;
   border-bottom: 1px solid var(--light-pink);
+  box-shadow: var(--box-shadow);
 }
 
 .banner {
@@ -109,7 +122,7 @@ a:hover {
   margin-left: 5%;
   position: absolute;
   text-align: left;
-  color: white;
+  color: var(--lightest-color);
   text-shadow: 1px 1px 2px black;
 }
 
@@ -125,7 +138,7 @@ a:hover {
   text-shadow: 1px 1px 2px black;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--box-shadow);
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: 10px;
   transition: all 200ms ease;
@@ -136,10 +149,10 @@ a:hover {
 }
 
 .link-square a:hover {
-  color: var(--darkest-color);
-  text-shadow: 1px 1px 2px var(--light-pink);
+  color: var(--blue);
+  text-shadow: 1px 1px 2px var(--darkest-color);
   transform: scale(1.1, 1.1);
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(30, 31, 61, 0.25);
   box-shadow: 0px 0px 5px 1px var(--light-pink);
   border: 1px solid var(--light-pink);
   font-weight: bold;
@@ -177,21 +190,90 @@ a:hover {
 .card {
   padding: 0;
   border: none;
+  background-color: var(--lightest-color);
+  color: var(--darker-purple);
 }
 
 .card-row {
   margin: 0 auto;
-  max-width: 50vw;
+  max-width: 65vw;
 }
 
-.contact-form {
-  background-color: var(--lightest-color);
+.card-text {
+  font-size: 1.25vw;
+}
+
+.project-icon {
+  margin: 0 10px;
+  font-size: 2vw;
+  color: var(--purple);
+  transition: all 200ms ease;
+}
+
+.project-icon:hover {
+  color: var(--blue);
+}
+
+.link-button {
+  background-color: var(--purple);
   color: var(--darkest-color);
 }
 
+.link-button:hover {
+  background-color: var(--pink);
+}
+
+.contact-form {
+  text-align: left;
+  margin: 0 auto;
+  background-color: var(--light-pink);
+  color: var(--darkest-color);
+  max-width: 50vw;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.form-label {
+  margin: 15px 0 0 0;
+}
+
+.send-button {
+  background-color: var(--purple);
+  transition: all 200ms ease;
+  color: var(--lightest-color);
+  display: block;
+  margin: 0 auto;
+}
+
+#form-message {
+  height: 115px;
+}
+
+.send-button:hover {
+  background-color: var(--blue);
+  color: var(--darker-purple);
+}
+
 .footer {
-  margin: auto;
+  width: 100vw;
+  margin: 0 auto;
   margin-top: 10vw;
+  background-color: rgba(30, 31, 61, 0.9);
+  position: relative;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-top: var(--light-pink) solid 1px;
+  padding: 10px 0;
+  color: var(--lightest-color);
+}
+
+.footer a {
+  color: var(--pink);
+  transition: all 200ms ease;
+}
+.footer a:hover {
+  color: var(--purple);
 }
 
 .socials a {
@@ -205,12 +287,13 @@ a:hover {
 }
 
 .navbar-custom {
-  background: rgb(39, 40, 94);
+  /* background: rgb(39, 40, 94);
   background: linear-gradient(
     90deg,
     rgba(39, 40, 94, 1) 0%,
     rgba(85, 86, 148, 1) 75%
-  );
+  ); */
+  background: var(--not-black);
   box-shadow: var(--box-shadow);
   border-bottom: 1px solid var(--darkest-color);
 }
@@ -244,6 +327,11 @@ a:hover {
 .navbar-custom .dropdown-item:hover {
   background-color: var(--purple);
 }
+
+.under-construction-image {
+  margin: 0 auto;
+}
+
 /* Media Queries */
 
 @media (min-width: 300px) {
@@ -260,6 +348,9 @@ a:hover {
   .footer i {
     font-size: 12px;
   }
+  .card {
+    text-align: center;
+  }
 }
 
 @media (min-width: 576px) {
@@ -269,6 +360,9 @@ a:hover {
     max-width: 65vw;
     margin: 20px auto;
     font-size: 4.5vw;
+  }
+  .card {
+    text-align: center;
   }
 }
 
@@ -285,6 +379,9 @@ a:hover {
   .footer i {
     font-size: 14px;
   }
+  .card {
+    text-align: left;
+  }
 }
 
 @media (min-width: 992px) {
@@ -294,6 +391,9 @@ a:hover {
     padding-top: 5vw;
     font-size: 3vw;
   }
+  .card {
+    text-align: left;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -302,6 +402,9 @@ a:hover {
     height: 15vw;
     padding-top: 5vw;
     font-size: 3vw;
+  }
+  .card {
+    text-align: left;
   }
 }
 
@@ -318,9 +421,13 @@ a:hover {
   .footer i {
     font-size: 16px;
   }
+  .card {
+    text-align: left;
+  }
 }
 
 /* Background Animation starts here! */
+/* Credit to Louis Hoebregts - https://codepen.io/Mamboleoo/pen/BxMQYQ */
 
 @keyframes move {
   100% {
