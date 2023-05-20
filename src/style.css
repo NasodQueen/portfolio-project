@@ -237,6 +237,9 @@ p {
   margin: 15px 0 0 0;
 }
 
+#form-message {
+  height: 115px;
+}
 .send-button {
   background-color: var(--purple);
   transition: all 200ms ease;
@@ -245,8 +248,9 @@ p {
   margin: 0 auto;
 }
 
-#form-message {
-  height: 115px;
+.send-button a {
+  text-decoration: none;
+  color: var(--lightest-color);
 }
 
 .send-button:hover {
