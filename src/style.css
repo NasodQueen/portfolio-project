@@ -334,6 +334,34 @@ p {
   background-color: var(--purple);
 }
 
+.image-gallery-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.image-gallery-container .image-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.image-gallery-container .image-box .dream {
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+
+.image-gallery-container .image-box .dream img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
 .under-construction-image {
   margin: 0 auto;
 }
@@ -429,6 +457,18 @@ p {
   }
   .card {
     text-align: left;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .image-gallery-container {
+    width: 90%;
+  }
+  .image-gallery-container .image-box {
+    flex-direction: column;
+  }
+  .image-gallery-container .image-box .dream {
+    width: 100%;
   }
 }
 
