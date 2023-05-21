@@ -94,6 +94,9 @@ p {
 
 .logo {
   max-width: 60px;
+  background-color: var(--purple);
+  margin: 5px 10px;
+  border-radius: 5px;
 }
 
 .index-banner {
