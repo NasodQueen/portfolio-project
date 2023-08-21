@@ -206,6 +206,11 @@ p {
   font-size: 1.25vw;
 }
 
+.project-card-link-grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+
 .project-icon {
   margin: 0 10px;
   font-size: 2vw;
